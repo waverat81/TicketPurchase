@@ -18,10 +18,6 @@ namespace TicketPurchases.Controllers
             ViewBag.Greeting = hour < 12 ? "Good Morning" : "Good Afternoon";
             return View();
         }
-        public ViewResult BuyTickets()
-        {
-            return View();
-        }
         [HttpGet]
         public ViewResult BuyTickets()
         {
@@ -31,7 +27,7 @@ namespace TicketPurchases.Controllers
         public ViewResult BuyTickets(BuyTickets buyTickets)
         {
             //TODO: Email response to organzier
-            return View("Thanks for your purchase", buyTickets);
+            return View("Thanks", buyTickets);
         }
     }
 }

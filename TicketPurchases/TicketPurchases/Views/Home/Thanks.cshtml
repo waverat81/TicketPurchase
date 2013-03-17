@@ -1,0 +1,20 @@
+﻿@model TicketPurchases.Models.BuyTickets
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Thanks</title>
+</head>
+<body>
+    <div>
+        <h1>Thank you @Model.Name for your purchase of @Model.TicketNumber tickets.</h1>
+        <p>Please enjoy your @Model.BandName concert!</p>
+    </div>
+</body>
+</html>
