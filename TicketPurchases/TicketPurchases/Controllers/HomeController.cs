@@ -26,8 +26,16 @@ namespace TicketPurchases.Controllers
         [HttpPost]
         public ViewResult BuyTickets(BuyTickets buyTickets)
         {
-            //TODO: Email response to organzier
-            return View("Thanks", buyTickets);
+            if (ModelState.IsValid)
+            {
+                //TODO: Email response to organzier
+                return View("Thanks", buyTickets);
+            }
+            else
+            {
+                // there is a validation error
+                return View();
+            }
         }
     }
 }
