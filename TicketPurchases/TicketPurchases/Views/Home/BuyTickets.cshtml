@@ -1,0 +1,31 @@
+﻿@model TicketPurchases.Models.BuyTickets
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>BuyTickets</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm())
+        {
+            <p>Your name: @Html.TextBoxFor(x => x.Name) </p>
+            <p>Your email: @Html.TextBoxFor(x => x.Email)</p>
+            <p>Your phone: @Html.TextBoxFor(x => x.Phone)</p>
+            <p>Choose a band
+            @Html.DropDownListFor(x => x.BandName, new[] {
+           new SelectListItem() {Text = "Metallica"},
+           new SelectListItem() {Text = "Motley Crue"},
+           new SelectListItem() {Text = "Judas Priest"} }, "Choose a Band")
+           </p>
+            <input type="submit" value="Submit RSVP" />
+        }
+    </div>
+</body>
+</html>
