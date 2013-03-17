@@ -24,7 +24,8 @@
            new SelectListItem() {Text = "Motley Crue"},
            new SelectListItem() {Text = "Judas Priest"} }, "Choose a Band")
            </p>
-            <input type="submit" value="Submit RSVP" />
+            <p>Number of tickets: @Html.TextBoxFor(x => x.TicketNumber)</p>
+            <input type="submit" value="Submit Purchase" />
         }
     </div>
 </body>

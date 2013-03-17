@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using TicketPurchases.Models;
 
 namespace TicketPurchases.Controllers
 {
@@ -21,6 +22,16 @@ namespace TicketPurchases.Controllers
         {
             return View();
         }
-
+        [HttpGet]
+        public ViewResult BuyTickets()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ViewResult BuyTickets(BuyTickets buyTickets)
+        {
+            //TODO: Email response to organzier
+            return View("Thanks for your purchase", buyTickets);
+        }
     }
 }
