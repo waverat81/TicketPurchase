@@ -17,6 +17,10 @@ namespace TicketPurchases.Controllers
             ViewBag.Greeting = hour < 12 ? "Good Morning" : "Good Afternoon";
             return View();
         }
+        public ViewResult BuyTickets()
+        {
+            return View();
+        }
 
     }
 }
